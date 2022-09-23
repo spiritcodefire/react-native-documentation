@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "app-millionnaire",
+    "slug": "app-millionnaire",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "app-millionnaire"
+}
