@@ -11,21 +11,18 @@ export default function MapFlatList() {
         { id : '4',  name : 'Angelina',  age : 32 },
     ]
 
-
     const [family, setFamilly] = useState(obj)
 
     const renderItem = ({item}) => (
         <View style={styles.viewList}>
-
-                <Text style={styles.text}>
-                    <Text style={styles.textBold}>Nom : </Text> 
-                    {item.name}
-                </Text>
-                <Text style={styles.text}>
-                    <Text style={styles.textBold}>age : </Text> 
-                    {item.age}
-                </Text>
-        
+            <Text style={styles.text}>
+                <Text style={styles.textBold}>Nom : </Text> 
+                {item.name}
+            </Text>
+            <Text style={styles.text}>
+                <Text style={styles.textBold}>age : </Text> 
+                {item.age}
+            </Text>
         </View>
     )
   
@@ -38,7 +35,6 @@ export default function MapFlatList() {
             keyExtractor={ item => item.id }
         />
     </View>
-
   )
 }
 
