@@ -7,6 +7,11 @@ import CreatePostScreen from "./components/screens/CreatePostScreen"
 import FlexInline from "./components/screens/FlexInline"
 import StyleSheetTest from "./components/screens/StyleSheetTest"
 import JsxCours22 from "./components/screens/JsxCours22"
+import Children24 from "./components/screens/Children24"
+import ComponentButton from "./components/screens/ComponentButton"
+import TextInput from "./components/screens/TextInput"
+import MapScrollView from "./components/screens/MapScrollView"
+import MapFlatList from "./components/screens/MapFlatList"
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +25,11 @@ function App() {
         <Stack.Screen name="FlexInline" component={FlexInline} />
         <Stack.Screen name="StyleSheet" component={StyleSheetTest} />
         <Stack.Screen name="JsxCours22" component={JsxCours22} />
+        <Stack.Screen name="Children24" component={Children24} />
+        <Stack.Screen name="ComponentButton" component={ComponentButton} />
+        <Stack.Screen name="TextInput" component={TextInput} />
+        <Stack.Screen name="MapScrollView" component={MapScrollView} />
+        <Stack.Screen name="MapFlatList" component={MapFlatList} />
       </Stack.Navigator>
     </NavigationContainer>
   );

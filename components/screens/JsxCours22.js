@@ -2,6 +2,7 @@ import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
 
 export default function JsxCours22() {
+  console.log("styles", JSON.stringify(styles))
   return (
     <View>
       <Text style={styles.descriptionH1} >Jsx Cours 22</Text>
