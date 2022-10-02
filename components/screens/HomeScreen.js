@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Button, View, Text } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 
 export default function HomeScreen({ route, navigation }) {
   React.useEffect(() => {
@@ -13,7 +12,7 @@ export default function HomeScreen({ route, navigation }) {
   }, [route.params?.post]);
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
+      <Text style={{margin: "1.25rem"}}>Welcome to home Page</Text>
       <Button
         title="Go to Details"
         onPress={() => {
@@ -24,11 +23,30 @@ export default function HomeScreen({ route, navigation }) {
           });
         }}
       />
+      <Text style={{ margin: 10 }}>Post: {route.params?.post}</Text>
+
       <Button
         title="Create post"
         onPress={() => navigation.navigate('CreatePost')}
       />
-      <Text style={{ margin: 10 }}>Post: {route.params?.post}</Text>
+      <View style={{margin: "1.25rem"}}>
+        <Button
+          title="Exemple flex style inline"
+          onPress={() => navigation.navigate('FlexInline')}
+        />
+      </View>
+      <View style={{margin: "1.25rem"}}>
+        <Button
+          title="StyleSheet"
+          onPress={() => navigation.navigate('StyleSheet')}
+        />
+      </View>
+      <View style={{margin: "1.25rem"}}>
+        <Button
+          title="JsxCours22"
+          onPress={() => navigation.navigate('JsxCours22')}
+        />
+      </View>
     </View>
   );
 }
