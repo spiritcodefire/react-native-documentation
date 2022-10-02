@@ -1,4 +1,4 @@
-import { View, StyleSheet, Button,Text, c } from 'react-native'
+import { View, StyleSheet, Button,Text, FlatList } from 'react-native'
 import React, {useState} from 'react'
 
 
@@ -11,7 +11,7 @@ export default function MapFlatList() {
         { id : '4',  name : 'Angelina',  age : 32 },
     ]
 
-    
+
     const [family, setFamilly] = useState(obj)
 
     const renderItem = ({item}) => (
@@ -32,7 +32,7 @@ export default function MapFlatList() {
   return (
     <View style={styles.wrapper} >
         <Text>FlatList est ideal an cas de grande liste, car elle ne charge que les elements qui sont sur l'écran</Text>
-        <MapFlatList
+        <FlatList
             data={family}
             renderItem={renderItem}
             keyExtractor={ item => item.id }
