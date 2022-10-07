@@ -15,6 +15,8 @@ import MapFlatList from "./components/screens-exemple/MapFlatList"
 import ExempleScreen from "./components/screens-exemple/HomeScreen"
 import ShoppingListHome from "./components/shopping-list/HomeShopping"
 import Intro from "./components/shopping-list/Intro"
+import ShoppingScrollView from "./components/shopping-list/ScrollView"
+import FlatListShopping from "./components/shopping-list/FlatListShopping"
 
 const Stack = createNativeStackNavigator();
 
@@ -38,6 +40,8 @@ function App() {
 
         <Stack.Screen name="ShoppingList" component={ShoppingListHome} />
         <Stack.Screen name="Intro" component={Intro} />
+        <Stack.Screen name="ShoppingScrollView" component={ShoppingScrollView} />
+        <Stack.Screen name="ShoppingFlatList" component={FlatListShopping} />
 
 
       </Stack.Navigator>

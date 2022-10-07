@@ -21,6 +21,18 @@ export default function HomeScreen({ route, navigation }) {
           onPress={() => navigation.navigate('Intro')}
         />
       </View>
+      <View style={{margin: "1rem"}}>
+        <Button
+          title="ShoppingScrollView"
+          onPress={() => navigation.navigate('ShoppingScrollView')}
+        />
+      </View>
+      <View style={{margin: "1rem"}}>
+        <Button
+          title="Shopping FlatList"
+          onPress={() => navigation.navigate('ShoppingFlatList')}
+        />
+      </View>
 
 
     </View>
