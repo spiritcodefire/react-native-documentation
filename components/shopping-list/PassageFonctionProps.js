@@ -1,7 +1,7 @@
 import  React, {useState} from 'react';
 import { Button, View, Text,StyleSheet, TextInput, FlatList } from 'react-native';
-import Products from "./Products"
-import AddProduct from './Addproduct';
+import Products from "./ProductsFonction"
+import AddProduct from './AddproductFonction';
 
 
 export default function Intro() {
@@ -10,26 +10,25 @@ export default function Intro() {
     const [myProduct, setMyProduct] = useState([])
 
 
-    const submitHandler = (product, setProduct) =>{
+    const submitHandler = (product) =>{
         // ici on va demander a mon array vide de stocker son ancienne valeur + la nouvelle valeur
         const idString =  Date.now().toString()
         // en mettrant d'abord l'object ensuite currentproduct, je met l'object inserer en premiere position et pas en derniere
         setMyProduct( (currentmyProduct) => [{key: idString , name : product},  ...currentmyProduct] )    
         
-        setProduct('') // permet de vider l'input
-        // console.log("myProduct",myProduct)
     }
-    console.log("myProduct",myProduct)
 
   return (
     <View style={styles.container}>
+
         <Text>L'interet du flat list c'est qu'il ne charge les elements du bas que si il lisible, c'est plus optimisé que ScrollView</Text>
+        
         <AddProduct submitHandler={submitHandler} />
 
         <FlatList
             data={myProduct}
-            renderItem={({item}) =>   <Products name={item.name} />
-        } />
+            renderItem={({item}) => <Products name={item.name} />} 
+        />
            
     </View>
   );

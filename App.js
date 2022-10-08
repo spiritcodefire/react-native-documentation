@@ -17,6 +17,7 @@ import ShoppingListHome from "./components/shopping-list/HomeShopping"
 import Intro from "./components/shopping-list/Intro"
 import ShoppingScrollView from "./components/shopping-list/ScrollView"
 import FlatListShopping from "./components/shopping-list/FlatListShopping"
+import PassageFonction from "./components/shopping-list/PassageFonctionProps"
 
 const Stack = createNativeStackNavigator();
 
@@ -42,6 +43,7 @@ function App() {
         <Stack.Screen name="Intro" component={Intro} />
         <Stack.Screen name="ShoppingScrollView" component={ShoppingScrollView} />
         <Stack.Screen name="ShoppingFlatList" component={FlatListShopping} />
+        <Stack.Screen name="PassageFonction" component={PassageFonction} />
 
 
       </Stack.Navigator>
