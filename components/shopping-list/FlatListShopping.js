@@ -28,7 +28,7 @@ export default function Intro() {
 
         <FlatList
             data={myProduct}
-            renderItem={({item}) =>   <Products name={item.name} />
+            renderItem={({item}) =>   <Products id={item.key} name={item.name} />
         } />
            
     </View>

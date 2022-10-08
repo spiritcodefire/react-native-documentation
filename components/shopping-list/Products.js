@@ -1,15 +1,58 @@
 import  React from 'react';
-import { View, Text, StyleSheet, TouchableWithoutFeedback } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, TouchableHighlight, Pressable } from 'react-native';
 
 
-const Products = ({name}) =>{
+const Products = ({name, id}) =>{
 
   return (
-    <TouchableWithoutFeedback onPress={()=> console.log('cliqué TouchableWithoutFeedback') } >
-      <View style={styles.items} onPress={()=> console.log('cliqué View')    }>
+    <TouchableOpacity 
+      // c'est une facon de faire un hover, dés qu'on touche , il y'a un changement d'opacité
+      activeOpacity={0.2} 
+      style={{backgroundColor: "red"}} 
+      onPress={()=> console.log('cliqué TouchableWithoutFeedback', id) } 
+    >
+      <View style={styles.items} >
           <Text style={styles.elements}>{name}</Text>
       </View>
-    </TouchableWithoutFeedback>
+    </TouchableOpacity>
+  );
+}
+
+const ProductsPressable = ({name, id}) =>{
+
+  // alternative interressante permettant de faire un hover qui change de couleur
+
+  return (
+    <Pressable 
+      // permet de déclencer uniquement lorsqu'un bouton est déclenché longtemps
+      onLongPress={()=> console.log('long press activé', id) }
+      activeOpacity={0.2} 
+      style={{backgroundColor: "red"}} 
+      onPress={()=> console.log('cliqué TouchableWithoutFeedback', id) } 
+      underlayColor="yellow"
+    >
+      <View style={styles.items} >
+          <Text style={styles.elements}>{name}</Text>
+      </View>
+    </Pressable>
+  );
+}
+const ProductshighLight = ({name, id}) =>{
+
+  // alternative interressante permettant de faire un hover qui change de couleur
+
+  return (
+    <TouchableHighlight 
+      // c'est une facon de faire un hover, dés qu'on touche , il y'a un changement d'opacité
+      activeOpacity={0.2} 
+      style={{backgroundColor: "red"}} 
+      onPress={()=> console.log('cliqué TouchableWithoutFeedback', id) } 
+      underlayColor="yellow"
+    >
+      <View style={styles.items} >
+          <Text style={styles.elements}>{name}</Text>
+      </View>
+    </TouchableHighlight>
   );
 }
 
@@ -18,5 +61,4 @@ const styles = StyleSheet.create({
     elements : { backgroundColor: "#ffb6c1",padding : 20, fontSize: 17, marginVertical: 6 }
 })
 
-
-export default Products
+export default ProductsPressable
