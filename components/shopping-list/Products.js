@@ -18,17 +18,17 @@ const Products = ({name, id}) =>{
   );
 }
 
-const ProductsPressable = ({name, id}) =>{
+const ProductsPressable = ({name, id, deleteProduct}) =>{
 
   // alternative interressante permettant de faire un hover qui change de couleur
 
   return (
     <Pressable 
       // permet de déclencer uniquement lorsqu'un bouton est déclenché longtemps
-      onLongPress={()=> console.log('long press activé', id) }
+      onLongPress={()=> deleteProduct(id)}
       activeOpacity={0.2} 
       style={{backgroundColor: "red"}} 
-      onPress={()=> console.log('cliqué TouchableWithoutFeedback', id) } 
+      onPress={()=> console.log("hello") } 
       underlayColor="yellow"
     >
       <View style={styles.items} >

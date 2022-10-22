@@ -26,6 +26,7 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="ShoppingList" component={ShoppingListHome} />
         
         <Stack.Screen name="ExempleScreen" component={ExempleScreen} />
         <Stack.Screen name="Details" component={DetailsScreen} />
@@ -39,7 +40,7 @@ function App() {
         <Stack.Screen name="MapScrollView" component={MapScrollView} />
         <Stack.Screen name="MapFlatList" component={MapFlatList} />
 
-        <Stack.Screen name="ShoppingList" component={ShoppingListHome} />
+        
         <Stack.Screen name="Intro" component={Intro} />
         <Stack.Screen name="ShoppingScrollView" component={ShoppingScrollView} />
         <Stack.Screen name="ShoppingFlatList" component={FlatListShopping} />
