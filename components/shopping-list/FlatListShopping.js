@@ -35,14 +35,16 @@ export default function Intro() {
         <Modal
             visible={showModal}
             onRequestClose={()=> setShowModal(false) }   
+            animationType="slide" // pour acceler les androids
+            transparent //
         >
            <View style={styles.modalContainer}>
                 <View style={styles.modalContent} >
                     <View style={styles.modalHeader} >
-                        <Text>Oups</Text>
+                        <Text style={styles.modalHeaderText} >Oups</Text>
                     </View>
-                    <View style={styles.modalHeader} >
-                        <Text style={styles.modalHeader} >merci d'indiquer plus qu'un seul caractère</Text>
+                    <View style={styles.modalBody} >
+                        <Text style={styles.modalBodyText} >Oups</Text>
                     </View>
                 </View>
             </View> 
@@ -61,7 +63,10 @@ export default function Intro() {
 }
 
 const styles = StyleSheet.create({
-    container : { padding: 40, paddingTop: 60 },
+    container : { 
+        padding: 40, 
+        paddingTop: 60 
+    },
     modalContainer : {
         flex: 1, 
         justifyContent: "center",
@@ -76,7 +81,6 @@ const styles = StyleSheet.create({
         alignItems: "center" 
     },
     modalHeader : {
-        backgroundColor : "grey",
         width: "100%", 
         padding: 16, 
         alignItems: "center",
@@ -88,6 +92,13 @@ const styles = StyleSheet.create({
     modalHeaderText : {
         color: "grey",
         fontSize: 17
+    },
+    modalBody : {
+        flex : 1,  // flex grow 1 , ca étire de haut en bas, ca prend tout l'espace
+        width: "100%",
+        backgroundColor: "fff",
+        borderBottomLeftRadius: 15,
+        borderBottomRightRadius: 15,
     },
     modalBodyText : {
         color: "grey",
